@@ -166,7 +166,7 @@ import { ref, computed, watch, nextTick } from 'vue'
 import { useWindowSize } from '@vueuse/core'
 import { useRouter } from 'vue-router'
 
-import { useCartStore } from '@/stores/useCartStore'
+// import { useCartStore } from '@/stores/useCartStore'
 
 import AccordionProduct from './AccordionProduct.vue'
 import AddToCartModal from '@/components/ProductCard/AddToCartModal.vue'
@@ -178,7 +178,7 @@ const props = defineProps({
 })
 
 const router = useRouter()
-const cartStore = useCartStore()
+// const cartStore = useCartStore()
 
 /* локальное состояние UI */
 const currentImage = ref('')
@@ -312,28 +312,28 @@ function openAddToCartModal(){ showAddToCartModal.value = true }
 function closeAddToCartModal(){ showAddToCartModal.value = false }
 
 /* === ДЕЙСТВИЯ === */
-function onAddToCart() {
-  if (!product.value) return
-  if (!canAddToCart.value) { alert('Выберите размер'); return }
+// function onAddToCart() {
+//   if (!product.value) return
+//   if (!canAddToCart.value) { alert('Выберите размер'); return }
 
-  cartStore.addToCart(product.value, {
-    selectedColor: selectedColorId.value, // ✦ NEW
-    selectedSize: selectedSize.value,
-    quantity: quantity.value
-  })
-  openAddToCartModal()
-}
-function onBuyNow() {
-  if (!product.value) return
-  if (!canAddToCart.value) { alert('Выберите размер'); return }
+//   cartStore.addToCart(product.value, {
+//     selectedColor: selectedColorId.value, // ✦ NEW
+//     selectedSize: selectedSize.value,
+//     quantity: quantity.value
+//   })
+//   openAddToCartModal()
+// }
+// function onBuyNow() {
+//   if (!product.value) return
+//   if (!canAddToCart.value) { alert('Выберите размер'); return }
 
-  cartStore.addToCart(product.value, {
-    selectedColor: selectedColorId.value, // ✦ NEW
-    selectedSize: selectedSize.value,
-    quantity: quantity.value
-  })
-  router.push({ name: 'cart' })
-}
+//   cartStore.addToCart(product.value, {
+//     selectedColor: selectedColorId.value, // ✦ NEW
+//     selectedSize: selectedSize.value,
+//     quantity: quantity.value
+//   })
+//   router.push({ name: 'cart' })
+// }
 </script>
 
 <style>

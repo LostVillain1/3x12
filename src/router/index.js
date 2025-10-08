@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import MainPage from '@/views/MainPage.vue'
 // import About from '@/views/About.vue'
 import Catalog from '@/views/Catalog.vue'
-// import ProductPage from '@/views/ProductPage.vue'
+import ProductPage from '@/views/ProductPage.vue'
 // import Favourites from '@/views/Favourites.vue'
 // import Cart from '@/components/Cart/Cart.vue'
 
