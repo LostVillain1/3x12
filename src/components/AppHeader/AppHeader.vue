@@ -5,7 +5,7 @@
             <!-- <BurgerMenuIcon @click="toggleMenu" class="burger-icon" :class="{ 'open': isMenuOpen }"></BurgerMenuIcon> -->
             <transition name="menu">
                 <div v-if="isMenuOpen" class="bg-menu_options">
-                    <router-link to="/">Каталог</router-link>
+                    <router-link to="/catalog">Каталог</router-link>
                     <router-link to="/">О бренде</router-link>
                     <router-link to="/">Корзина</router-link>
                     <!-- <router-link to="/favourites">Избранное</router-link>                   -->
@@ -13,7 +13,7 @@
             </transition>
         </div>
         <div class="header__options left" v-if="isDesktop">
-            <router-link to="/">Каталог</router-link>
+            <router-link to="/catalog">Каталог</router-link>
             <router-link to="/" class="brand">О бренде</router-link>
             <!-- <router-link to="/">Корзина</router-link> -->
             <!-- <div>Каталог</div>

@@ -4,7 +4,6 @@
     <AppHeader />
     <Visions></Visions>
   </div>
-  <button @click="$router.push({ name: 'catalog' })">Go Catalog</button>
   <AppFooter />
 </template>
 

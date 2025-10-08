@@ -193,15 +193,18 @@ function finishDrag () {
   text-decoration: none;
   color: inherit;
   font-family: 'PT Serif', serif;
-  font-size: 16px;
+  font-size: 18px;
   background: #F3F1E2;
   transition: box-shadow .3s ease;
+
+  border-radius: 12px;        /* было: без радиуса */
+  overflow: hidden; 
 }
 .item:hover { box-shadow: 0 2px 8px rgba(0,0,0,.08); }
 
-.name { color: #39213D }
-.code { color: #39213D }
-.price { color: #39213D }
+.name { color: #1E3035 }
+.code { color: #1E3035 }
+.price { color: #1E3035 }
 
 .slider { position: relative; width: 100%; overflow: hidden; outline: none; }
 .track { display: flex; width: 100%; will-change: transform; list-style: none; padding: 0; margin: 0; }
@@ -216,8 +219,10 @@ function finishDrag () {
 .text { letter-spacing: 2px; margin: 4px 0; }
 .name { margin-top: 6px; }
 
+@media (min-width:768px){ .text{font-size:20px; letter-spacing:6px;} }
+
 /* Оставляю, хотя сейчас не используется (для будущего избранного) */
-@media (min-width:1024px){ .text{font-size:20px; letter-spacing:6px;} }
+@media (min-width:1024px){ .text{font-size:22px; letter-spacing:6px;} }
 
 .fav { position: absolute; top: 0; right: 0; transform: translate(-10px, 10px); z-index: 2; }
 .fav svg { pointer-events: all; }

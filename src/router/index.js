@@ -24,11 +24,14 @@ const router = createRouter({
       name: 'catalog',
       component: Catalog,
     },
-    // { path: '/product/:id',
-    //   name: 'product',
-    //   component: ProductPage,
-    //   props: true // Позволяет передавать :id как пропс 
-    // },
+    { path: '/:pathMatch(.*)*',
+      redirect: '/' 
+    },
+    { path: '/product/:id',
+      name: 'product',
+      component: ProductPage,
+      props: true // Позволяет передавать :id как пропс 
+    },
     // { path: '/favourites',
     //   name: 'favourites',
     //   component: Favourites,

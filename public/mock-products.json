@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Худи женское",
-    "code": "W-HOODIE-001",
+    "name": "Vision Sports Bra",
+    "code": "",
     "price": 1999,
     "description": "Удобная базовая толстовка из хлопка с мягким флисом внутри.",
     "defaultColor": "bordo",
@@ -18,8 +18,9 @@
         "hex": "#7B2036",
         "skuSuffix": "BRD",
         "images": [
-          "/images/photo1.png",
+          "/images/photo4.jpg",
           "/images/photo1.png"
+          
         ],
         "sizes": [
           { "size": "XS", "inStock": true },
@@ -50,8 +51,8 @@
   },
   {
     "id": 2,
-    "name": "Худи мужское",
-    "code": "M-HOODIE-001",
+    "name": "Vision Sports Bra",
+    "code": "",
     "price": 2299,
     "description": "Универсальная толстовка из хлопка средней плотности.",
     "defaultColor": "yellow",
