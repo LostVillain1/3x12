@@ -2,6 +2,10 @@
   <div class="product-item">
     <!-- Вся карточка — ссылка. Обычный клик теперь всегда навигирует. -->
     <router-link class="item" :to="`/product/${product.id}`">
+      <!-- Альтернатива (рекомендую на будущее): именованный маршрут
+      <router-link class="item" :to="{ name: 'product', params: { id: product.id } }">
+      -->
+
       <!-- Слайдер: НЕТ @click.
            Мы различаем «свайп» и «клик». Если это был свайп — отменим клик в capture. -->
       <div
@@ -9,7 +13,7 @@
         tabindex="0"
         aria-roledescription="carousel"
         :aria-label="`Фотогалерея товара ${product.name}`"
-        @click.capture="maybeSuppressClick"   
+        @click.capture="maybeSuppressClick"
         @keydown.left.prevent.stop="prev"
         @keydown.right.prevent.stop="next"
 
@@ -60,15 +64,19 @@
       <!-- Подписи -->
       <p class="text name">{{ product.name }}</p>
       <p class="text code">{{ product.code }}</p>
-      <p class="text price">{{ product.price }} ₽</p>
+      <!-- CHANGE: форматирование цены по-русски, но оставляю твою разметку -->
+      <p class="text price">{{ formattedPrice }} ₽</p>
+      <!-- Было: <p class="text price">{{ product.price }} ₽</p> -->
     </router-link>
 
     <!-- Избранное: клик не ведёт по ссылке -->
-    <!-- <component
+    <!--
+    <component
       :is="isDesktop ? (isFavourite ? FavDescFilled : FavDesc) : (isFavourite ? FavMobFilled : FavMonogram)"
       class="fav"
       @click.stop.prevent="toggleFavourite"
-    /> -->
+    />
+    -->
   </div>
 </template>
 
@@ -83,7 +91,7 @@ import { useWindowSize } from '@vueuse/core'
 
 const props = defineProps({ product: { type: Object, required: true } })
 
-/* избранное */
+/* избранное (оставляю как было, закомментировано) */
 // const favouriteStore = useFavouriteStore()
 // const isFavourite = computed(() => favouriteStore.isFavourite(props.product.id))
 // function toggleFavourite () {
@@ -91,16 +99,33 @@ const props = defineProps({ product: { type: Object, required: true } })
 //   else favouriteStore.addToFavourites(props.product)
 // }
 
-/* брейкпоинт */
+/* брейкпоинт (оставляем — используется в закомментированном избранном) */
 const { width } = useWindowSize()
 const isDesktop = computed(() => width.value >= 1024)
 
-/* слайдер */
+/* CHANGE: источники картинок под новый mock
+   1) Берём картинки defaultColor из product.colors
+   2) Если нет — первый цвет из product.colors
+   3) Если нет — верхнеуровневые product.images (совместимость)
+   4) Иначе — плейсхолдер */
 const images = computed(() => {
-  const arr = Array.isArray(props.product.images) ? props.product.images : []
+  const p = props.product || {}
+
+  if (Array.isArray(p.colors) && p.colors.length) {
+    const chosen = p.colors.find(c => c.id === p.defaultColor) || p.colors[0]
+    if (Array.isArray(chosen?.images) && chosen.images.length) {
+      return chosen.images
+    }
+  }
+
+  const arr = Array.isArray(p.images) ? p.images : []
   return arr.length ? arr : ['/images/placeholder.jpg']
 })
 
+/* CHANGE: форматирование цены с разделителями */
+const formattedPrice = computed(() => Number(props.product?.price ?? 0).toLocaleString('ru-RU'))
+
+/* слайдер */
 const currentIndex = ref(0)
 
 function clampIndex (i) {
@@ -174,9 +199,9 @@ function finishDrag () {
 }
 .item:hover { box-shadow: 0 2px 8px rgba(0,0,0,.08); }
 
-.name {color : #39213D}
-.code {color : #39213D}
-.price {color : #39213D}
+.name { color: #39213D }
+.code { color: #39213D }
+.price { color: #39213D }
 
 .slider { position: relative; width: 100%; overflow: hidden; outline: none; }
 .track { display: flex; width: 100%; will-change: transform; list-style: none; padding: 0; margin: 0; }
@@ -191,6 +216,7 @@ function finishDrag () {
 .text { letter-spacing: 2px; margin: 4px 0; }
 .name { margin-top: 6px; }
 
+/* Оставляю, хотя сейчас не используется (для будущего избранного) */
 @media (min-width:1024px){ .text{font-size:20px; letter-spacing:6px;} }
 
 .fav { position: absolute; top: 0; right: 0; transform: translate(-10px, 10px); z-index: 2; }

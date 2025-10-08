@@ -7,8 +7,8 @@
     "description": "Удобная базовая толстовка из хлопка с мягким флисом внутри.",
     "defaultColor": "bordo",
     "images": [
-      "/images/hoodie/women/bordo/1.jpg",
-      "/images/hoodie/women/bordo/2.jpg"
+      "/images/photo1.png",
+      "/images/photo2.png"
     ],
     "sizes": ["XS", "S", "M", "L", "XL"],
     "colors": [
@@ -18,8 +18,8 @@
         "hex": "#7B2036",
         "skuSuffix": "BRD",
         "images": [
-          "/images/hoodie/women/bordo/1.jpg",
-          "/images/hoodie/women/bordo/2.jpg"
+          "/images/photo1.png",
+          "/images/photo1.png"
         ],
         "sizes": [
           { "size": "XS", "inStock": true },
@@ -35,31 +35,14 @@
         "hex": "#F6CF3C",
         "skuSuffix": "YLW",
         "images": [
-          "/images/hoodie/women/yellow/1.jpg",
-          "/images/hoodie/women/yellow/2.jpg"
+          "/images/photo2.png",
+          "/images/photo2.png"
         ],
         "sizes": [
           { "size": "XS", "inStock": true },
           { "size": "S", "inStock": true },
           { "size": "M", "inStock": false },
           { "size": "L", "inStock": false },
-          { "size": "XL", "inStock": true }
-        ]
-      },
-      {
-        "id": "black",
-        "name": "Чёрный",
-        "hex": "#111111",
-        "skuSuffix": "BLK",
-        "images": [
-          "/images/hoodie/women/black/1.jpg",
-          "/images/hoodie/women/black/2.jpg"
-        ],
-        "sizes": [
-          { "size": "XS", "inStock": true },
-          { "size": "S", "inStock": true },
-          { "size": "M", "inStock": true },
-          { "size": "L", "inStock": true },
           { "size": "XL", "inStock": true }
         ]
       }
@@ -73,8 +56,8 @@
     "description": "Универсальная толстовка из хлопка средней плотности.",
     "defaultColor": "yellow",
     "images": [
-      "/images/hoodie/men/yellow/1.jpg",
-      "/images/hoodie/men/yellow/2.jpg"
+      "/images/photo2.png",
+      "/images/photo3.png"
     ],
     "sizes": ["S", "M", "L", "XL", "XXL"],
     "colors": [
@@ -84,8 +67,8 @@
         "hex": "#F6CF3C",
         "skuSuffix": "YLW",
         "images": [
-          "/images/hoodie/men/yellow/1.jpg",
-          "/images/hoodie/men/yellow/2.jpg"
+          "/images/photo2.png",
+          "/images/photo2.png"
         ],
         "sizes": [
           { "size": "S", "inStock": true },
@@ -101,8 +84,8 @@
         "hex": "#2B2F33",
         "skuSuffix": "GRF",
         "images": [
-          "/images/hoodie/men/graphite/1.jpg",
-          "/images/hoodie/men/graphite/2.jpg"
+          "/images/photo3.png",
+          "/images/photo3.png"
         ],
         "sizes": [
           { "size": "S", "inStock": true },
