@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "name": "Худи женское",
+    "code": "W-HOODIE-001",
+    "price": 1999,
+    "description": "Удобная базовая толстовка из хлопка с мягким флисом внутри.",
+    "defaultColor": "bordo",
+    "images": [
+      "/images/hoodie/women/bordo/1.jpg",
+      "/images/hoodie/women/bordo/2.jpg"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": [
+      {
+        "id": "bordo",
+        "name": "Бордовый",
+        "hex": "#7B2036",
+        "skuSuffix": "BRD",
+        "images": [
+          "/images/hoodie/women/bordo/1.jpg",
+          "/images/hoodie/women/bordo/2.jpg"
+        ],
+        "sizes": [
+          { "size": "XS", "inStock": true },
+          { "size": "S", "inStock": true },
+          { "size": "M", "inStock": true },
+          { "size": "L", "inStock": false },
+          { "size": "XL", "inStock": true }
+        ]
+      },
+      {
+        "id": "yellow",
+        "name": "Жёлтый",
+        "hex": "#F6CF3C",
+        "skuSuffix": "YLW",
+        "images": [
+          "/images/hoodie/women/yellow/1.jpg",
+          "/images/hoodie/women/yellow/2.jpg"
+        ],
+        "sizes": [
+          { "size": "XS", "inStock": true },
+          { "size": "S", "inStock": true },
+          { "size": "M", "inStock": false },
+          { "size": "L", "inStock": false },
+          { "size": "XL", "inStock": true }
+        ]
+      },
+      {
+        "id": "black",
+        "name": "Чёрный",
+        "hex": "#111111",
+        "skuSuffix": "BLK",
+        "images": [
+          "/images/hoodie/women/black/1.jpg",
+          "/images/hoodie/women/black/2.jpg"
+        ],
+        "sizes": [
+          { "size": "XS", "inStock": true },
+          { "size": "S", "inStock": true },
+          { "size": "M", "inStock": true },
+          { "size": "L", "inStock": true },
+          { "size": "XL", "inStock": true }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Худи мужское",
+    "code": "M-HOODIE-001",
+    "price": 2299,
+    "description": "Универсальная толстовка из хлопка средней плотности.",
+    "defaultColor": "yellow",
+    "images": [
+      "/images/hoodie/men/yellow/1.jpg",
+      "/images/hoodie/men/yellow/2.jpg"
+    ],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "colors": [
+      {
+        "id": "yellow",
+        "name": "Жёлтый",
+        "hex": "#F6CF3C",
+        "skuSuffix": "YLW",
+        "images": [
+          "/images/hoodie/men/yellow/1.jpg",
+          "/images/hoodie/men/yellow/2.jpg"
+        ],
+        "sizes": [
+          { "size": "S", "inStock": true },
+          { "size": "M", "inStock": true },
+          { "size": "L", "inStock": true },
+          { "size": "XL", "inStock": true },
+          { "size": "XXL", "inStock": false }
+        ]
+      },
+      {
+        "id": "graphite",
+        "name": "Графит",
+        "hex": "#2B2F33",
+        "skuSuffix": "GRF",
+        "images": [
+          "/images/hoodie/men/graphite/1.jpg",
+          "/images/hoodie/men/graphite/2.jpg"
+        ],
+        "sizes": [
+          { "size": "S", "inStock": true },
+          { "size": "M", "inStock": true },
+          { "size": "L", "inStock": true },
+          { "size": "XL", "inStock": false },
+          { "size": "XXL", "inStock": false }
+        ]
+      }
+    ]
+  }
+]

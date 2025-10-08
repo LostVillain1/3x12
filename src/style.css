@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Aurora&display=swap');
+
+/* Modern CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* Улучшает рендеринг текста */
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  /* Устанавливаем основные шрифты */
+  font-family: -apple-system, BlinkMacSystemFont, 'Aurora', 'Segoe UI', 'Roboto', 
+               'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 
+               'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Убираем стандартные стили для списков */
+ol, ul {
+  list-style: none;
+}
+
+/* Убираем подчеркивание у ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Убираем стандартные стили для кнопок */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* Убираем стандартные стили для input */
+input, textarea, select {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+/* Убираем стандартные стили для изображений */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Убираем стандартные стили для таблиц */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

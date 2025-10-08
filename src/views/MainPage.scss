@@ -1,0 +1,29 @@
+.mr__wrapper {
+  width: 100%;
+  max-height: 100vh;        
+  display: flex;             
+  flex-direction: column;  
+}
+
+
+.bg__wrapper {
+    position: relative;
+    flex: 1;
+    // width: 100%;
+    // height: 100%;
+    // background-image: url('@/assets/mat_bg_mob.png');
+}
+
+.bg__wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Обрежет края, но заполнит контейнер */
+}
+
+.logo-text__wrapper {
+    position: absolute;
+    left: 50%; /* Сдвигает левый край в центр */
+    transform: translateX(-50%); /* Возвращает назад на половину своей ширины */
+    bottom: 30%;
+}
+
