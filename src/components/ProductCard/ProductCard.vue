@@ -146,9 +146,9 @@
 
           <!-- <p>Таблица размеров</p> -->
 
-          <accordion-product title="Состав" />
-          <accordion-product title="Характеристики" />
-          <accordion-product title="Уход за одеждой" />
+          <accordion-product title="Описание" />
+          <accordion-product title="Доставка и возврат" />
+          <!-- <accordion-product title="Уход за одеждой" /> -->
         </div>
       </div>
     </div>
