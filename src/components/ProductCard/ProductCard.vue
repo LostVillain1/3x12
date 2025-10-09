@@ -327,7 +327,7 @@ function closeAddToCartModal(){ showAddToCartModal.value = false }
   cursor:pointer;
   opacity:.9;
 }
-.gallery-mobile-thumb.active{ border-color:#39213D; opacity:1; }
+.gallery-mobile-thumb.active{ border-color:#1E3035; opacity:1; }
 .gallery-mobile-thumb img{
   width:100%;
   height:100%;
@@ -393,4 +393,82 @@ function closeAddToCartModal(){ showAddToCartModal.value = false }
 .color-btn.active { border-color:#1E3035; }
 .color-btn__swatch { width:18px; height:18px; border-radius:50%; border:1px solid rgba(0,0,0,.2); display:inline-block; }
 .size-btn.is-disabled { opacity:.45; cursor:not-allowed; }
+
+/* ============================
+   TABLET OVERRIDES (768–1023)
+   Макет: мобильная композиция,
+   увеличенные элементы
+   ============================ */
+@media (min-width:768px){
+
+  /* контейнер карточки */
+  .product-card{ padding: 24px; }
+
+  /* всё остаётся в одну колонку */
+  .product-wrapper{
+    flex-direction: column;          /* ← критично */
+    align-items: stretch;
+    gap: 24px;
+    max-width: 720px;                /* центрируем контент по макету */
+    margin: 0 auto;
+  }
+
+  /* хлебные крошки / заголовок */
+  .nav{ font-size: 18px; letter-spacing: .10em; margin-bottom: 16px; }
+  .product-title{ font-size: 36px; letter-spacing: .12em; margin-bottom: 18px; }
+
+  /* галерея — используем мобильную версию, но крупнее */
+  .gallery-mobile .slide{ padding-right: 12px; }
+  .gallery-mobile img{ border-radius: 12px; }
+  .gallery-mobile .dots{ gap: 10px; }
+
+  /* миниатюры активного цвета под главным фото — крупнее */
+  .gallery-mobile-thumbs{ gap: 10px; margin-top: 10px; }
+  .gallery-mobile-thumb{ width: 180px; height: 180px; border-radius: 8px; padding: 4px}
+
+  /* правая колонка (текст/кнопки) — ширина на всю строку */
+  .product-info{
+    max-width: 100%;                 /* ← убираем «узкую» колонку */
+    margin-right: 0;
+  }
+
+  .product-name{ font-size: 24px; }
+  .product-price{ font-size: 24px; margin: 22px 0; }
+
+  /* выбор цвета — мини-карточки */
+  .product-colors{ margin-bottom: 18px; }
+  .product-colors p.label{ font-size: 20px; margin-bottom: 12px; }
+  .product-colors .color-cards{ gap: 12px; }
+  .color-card{ width: 116px; padding: 8px 8px 10px; border-radius: 10px; }
+  .color-card__img-wrap{ height: 92px; border-radius: 8px; }
+  .color-card__name{ font-size: 16px; }
+
+  /* размеры — «пилюли» чуть крупнее и плотнее */
+  .product-sizes{ margin-bottom: 26px; }
+  .product-sizes .label{ font-size: 20px; margin-bottom: 10px; }
+  .sizes-list{ gap: 20px; }
+  .size-btn{
+    height: 40px;
+    min-width: 56px;
+    padding: 0 16px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+
+  /* CTA */
+  .product-qty-row{ margin-bottom: 20px; }
+  .add-to-cart{
+    font-size: 20px;
+    min-height: 54px;
+    border-radius: 10px;
+  }
+  .buy-now{
+    font-size: 18px;
+    min-height: 50px;
+    border-radius: 10px;
+  }
+
+  .accordion-item{ border-radius: 10px; }
+}
+
 </style>
