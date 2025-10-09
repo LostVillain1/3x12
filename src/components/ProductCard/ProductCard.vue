@@ -402,7 +402,7 @@ function closeAddToCartModal(){ showAddToCartModal.value = false }
 @media (min-width:768px){
 
   /* контейнер карточки */
-  .product-card{ padding: 24px; }
+  .product-card{ padding: 40px; }
 
   /* всё остаётся в одну колонку */
   .product-wrapper{
@@ -437,38 +437,38 @@ function closeAddToCartModal(){ showAddToCartModal.value = false }
 
   /* выбор цвета — мини-карточки */
   .product-colors{ margin-bottom: 18px; }
-  .product-colors p.label{ font-size: 20px; margin-bottom: 12px; }
+  .product-colors p.label{ font-size: 30px; margin-bottom: 12px; }
   .product-colors .color-cards{ gap: 12px; }
   .color-card{ width: 116px; padding: 8px 8px 10px; border-radius: 10px; }
   .color-card__img-wrap{ height: 92px; border-radius: 8px; }
-  .color-card__name{ font-size: 16px; }
+  .color-card__name{ font-size: 20px; }
 
   /* размеры — «пилюли» чуть крупнее и плотнее */
   .product-sizes{ margin-bottom: 26px; }
-  .product-sizes .label{ font-size: 20px; margin-bottom: 10px; }
-  .sizes-list{ gap: 20px; }
+  .product-sizes .label{ font-size: 30px; margin-bottom: 10px; }
+  .sizes-list{ gap: 40px; }
   .size-btn{
     height: 40px;
-    min-width: 56px;
+    min-width: 70px;
     padding: 0 16px;
-    font-size: 18px;
+    font-size: 24px;
     border-radius: 12px;
   }
 
   /* CTA */
   .product-qty-row{ margin-bottom: 20px; }
   .add-to-cart{
-    font-size: 20px;
+    font-size: 30px;
     min-height: 54px;
     border-radius: 10px;
   }
   .buy-now{
-    font-size: 18px;
+    font-size: 30px;
     min-height: 50px;
     border-radius: 10px;
   }
 
-  .accordion-item{ border-radius: 10px; }
+  .accordion-item{ border-radius: 10px; font-size: 24px;}
 }
 
 </style>

@@ -95,7 +95,7 @@ const toggle = () => { isOpen.value = !isOpen.value }
 /* Планшет/десктоп: немного крупнее */
 @media (min-width: 768px) {
   .acc { padding: 14px 16px; border-radius: 14px; }
-  .acc__header { font-size: 20px; }
-  .acc__content { font-size: 18px; }
+  .acc__header { font-size: 24px; }
+  .acc__content { font-size: 20px; }
 }
 </style>

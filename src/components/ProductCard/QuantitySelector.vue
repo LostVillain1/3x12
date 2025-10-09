@@ -55,15 +55,27 @@ function dec() {
 .qty{
   display:flex; align-items:center; justify-content:center; gap:12px;
   width:140px; height:44px;
-  border:1px solid #bfb7a9; border-radius:8px;
+  border:1px solid #1E3035; border-radius:8px;
   background:#D5D9D9;
 }
 .qty__btn{
   width:40px; height:36px; border:none; background:transparent;
   font-size:22px; line-height:1; cursor:pointer; color:#1E3035;
 }
-.qty__btn:disabled{ opacity:.4; cursor:not-allowed }
+.qty__btn:disabled{ cursor:not-allowed }
 .qty__value{ min-width:28px; text-align:center; font-size:18px; color:#1E3035 }
+
+@media (min-width:768px) {
+.qty {
+  height: 60px;
+  width: 170px; 
+}
+
+
+
+}
+
+
 
 /* ≥1024px — как в десктоп-макете */
 @media (min-width:1024px){
