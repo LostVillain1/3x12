@@ -8,7 +8,7 @@
     "defaultColor": "bordo",
     "images": [
       "/images/photo1.png",
-      "/images/photo2.png"
+      "/images/photo5.png"
     ],
     "sizes": ["XS", "S", "M", "L", "XL"],
     "colors": [
@@ -19,7 +19,7 @@
         "skuSuffix": "BRD",
         "images": [
           "/images/photo4.jpg",
-          "/images/photo1.png"
+          "/images/photo5.png"
           
         ],
         "sizes": [
@@ -37,7 +37,7 @@
         "skuSuffix": "YLW",
         "images": [
           "/images/photo2.png",
-          "/images/photo2.png"
+          "/images/photo5.png"
         ],
         "sizes": [
           { "size": "XS", "inStock": true },
@@ -58,7 +58,7 @@
     "defaultColor": "yellow",
     "images": [
       "/images/photo2.png",
-      "/images/photo3.png"
+      "/images/photo5.png"
     ],
     "sizes": ["S", "M", "L", "XL", "XXL"],
     "colors": [
@@ -69,7 +69,7 @@
         "skuSuffix": "YLW",
         "images": [
           "/images/photo2.png",
-          "/images/photo2.png"
+          "/images/photo5.png"
         ],
         "sizes": [
           { "size": "S", "inStock": true },

@@ -1,14 +1,14 @@
 /* ==== БАЗА ==== */
 .product-card {
   padding: 16px;
-  background:#F3F1E2;
-  color:#39213D;
+  background:#D5D9D9;
+  color:#1E3035;
   font-family:'PT Serif', serif;
 }
 
 /* Хлебные крошки — крупнее и «воздушнее» */
 .nav{
-  color:#39213D;
+  color:#1E3035;
   font-size:16px;          /* mobile */
   margin-bottom:14px;
   letter-spacing: 1em;
@@ -75,13 +75,13 @@
 
 .product-name{ font-size:22px; font-weight:700; margin-bottom:6px; letter-spacing:.03em; }
 .product-code{ font-size:12px; margin:2px 0 8px }
-.product-price{ font-size:22px; margin:4px 0 }
+.product-price{ font-size:22px; margin:20px 0 }
 .product-installment{ font-size:12px; color:#6b5b62; margin:2px 0 16px }
 
 /* ==== РАЗМЕРЫ ==== */
 /* Mobile — крупнее кегль и больше зазоры */
 .product-sizes .label{
-  font-size:16px;
+  font-size:24px;
   margin-bottom:8px;
   letter-spacing:.04em;
 }
@@ -94,7 +94,7 @@
   background:none; border:none; border-bottom:2px solid transparent;
   padding:8px 0;            /* было 6px */
   font-size:18px;           /* было 16px */
-  color:#39213D; cursor:pointer;
+  color:#1E3035; cursor:pointer;
   letter-spacing:.03em;
   transition:color .2s, border-color .2s;
 }
@@ -111,9 +111,9 @@
 
 /* Кнопка "В корзину" (высота фикс, чтобы совпадать с QuantitySelector) */
 .add-to-cart{
-  background:#39213D;
-  color:#FFFCDC;
-  font-size:16px;
+  background:#0E8188;
+  color:#D5D9D9;
+  font-size:24px;
   font-weight:500;
   padding:12px 20px;         /* нормальные отступы */
   min-height:48px;           /* вместо фиксированной height */
@@ -121,18 +121,17 @@
   align-items:center;
   justify-content:center;
   white-space:nowrap;        /* ✦ запрещаем перенос строки */
-  border:1px solid #5e2a68;
+  border:1px solid #0E8188;
   border-radius:8px;
   cursor:pointer;
 }
 
-
 /* "Быстрая покупка" — на всю ширину и с отступом вниз */
 .buy-now{
-  background:transparent; color:#39213D;
-  font-size:16px; font-weight:400;
+  background:transparent; color:#1E3035;
+  font-size:24px; font-weight:400;
   padding:10px 14px;
-  border:1px solid #5e2a68; border-radius:8px; cursor:pointer;
+  border:1px solid #0E8188; border-radius:8px; cursor:pointer;
   width:100%;
   margin-bottom:12px;       /* отступ до "Таблица размеров" */
 }
@@ -198,7 +197,7 @@
   .cta-row{
     flex-direction:row; align-items:center; gap:16px; margin:12px 0 12px;
   }
-  .product-qty-row{ flex:0 0 auto; }
+  .product-qty-row{ flex:0 0 auto; margin-bottom: 24px;}
 
   .add-to-cart{
     flex:1 1 auto;
@@ -210,7 +209,6 @@
     white-space:nowrap;        /* ✦ тоже фиксируем */
   }
 
-
   .buy-now{
     min-height:44px;
     padding:10px 18px;
@@ -218,5 +216,84 @@
     border-radius:4px;
     width:100%;
     letter-spacing:.02em;
+  }
+}
+
+/* =========================================================
+   SIZE PICKER (mobile-first) — ДОБАВЛЕНО: «пилюли» как в макете
+   Ничего не удаляем — переопределяем поверх базовых правил
+   ========================================================= */
+.product-sizes{
+  margin-bottom: 24px;
+}
+
+.product-sizes .label{
+  font-size: 24px;          /* компактнее на мобиле */
+  margin-bottom: 10px;
+  letter-spacing: .02em;
+}
+
+.sizes-list{
+  gap: 24px;                /* плотнее как в макете */
+  margin-top: 8px;
+}
+
+.size-btn{
+  /* визуал */
+  background: #D5D9D9;
+  border: 1px solid rgba(30,48,53,.25);
+  color: #1E3035;
+
+  /* геометрия */
+  min-width: 50px;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 10px;    /* закруглённые углы */
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* взаимодействие */
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease;
+}
+
+.size-btn:hover{
+  // background: rgba(30,48,53,.12);
+}
+.size-btn:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(30,48,53,.18);
+}
+
+.size-btn.active{
+  background: rgba(30,48,53,.18);
+  border-color: #1E3035;
+  font-weight: 600;
+}
+
+.size-btn.is-disabled{
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+/* tablet+ */
+@media (min-width: 768px){
+  .sizes-list{ gap: 12px; }
+  .size-btn{
+    height: 36px;
+    padding: 0 14px;
+    font-size: 16px;
+  }
+}
+
+/* desktop */
+@media (min-width: 1024px){
+  .sizes-list{ gap: 14px; }
+  .size-btn{
+    height: 38px;
+    padding: 0 16px;
+    font-size: 17px;
   }
 }
